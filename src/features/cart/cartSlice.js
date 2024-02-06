@@ -5,6 +5,7 @@ const initialState = {
     id: 1,
     products: [],
   },
+  subtotal: 0,
   showCart: false,
   status: "idle",
 };
@@ -32,8 +33,20 @@ const cartSlice = createSlice({
     toggleCart: (state, action) => {
       state.showCart = action.payload;
     },
+    addSubTotal: (state, action) => {
+      state.subtotal += action.payload;
+    },
+    deductSubTotal: (state, action) => {
+      state.subtotal -= action.payload;
+    },
   },
 });
 
-export const { toggleCart, addItemToCart, deleteItem } = cartSlice.actions;
+export const {
+  addSubTotal,
+  deductSubTotal,
+  toggleCart,
+  addItemToCart,
+  deleteItem,
+} = cartSlice.actions;
 export default cartSlice.reducer;

@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getSingleProduct } from "../features/single_product_page/singleProductSlice";
-import { addItemToCart } from "../features/cart/cartSlice";
+import { addItemToCart, addSubTotal } from "../features/cart/cartSlice";
 //import { addToCart } from "../features/cart/cartSlice";
 
 export default function SingleProductPage() {
@@ -23,6 +23,7 @@ export default function SingleProductPage() {
   };
   const handleAddToCart = () => {
     dispatch(addItemToCart({ productId: id, quantity: parseInt(quantity) }));
+    dispatch(addSubTotal(product.price * quantity));
   };
 
   return (

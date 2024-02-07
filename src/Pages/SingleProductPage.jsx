@@ -39,7 +39,7 @@ export default function SingleProductPage() {
             alt={`${product.title} image`}
           ></img>
           <h1>{product.description}</h1>
-          <h1 className="font-bold">U$D {product.price}</h1>
+          <h1 className="font-bold">USD ${product.price}</h1>
           <button
             onClick={handleAddToCart}
             className="btn btn-accent px-14 btn-md rounded-md"

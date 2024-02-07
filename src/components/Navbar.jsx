@@ -31,25 +31,31 @@ export default function Navbar() {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>Item 1</a>
+                <Link to="/">HOME</Link>{" "}
               </li>
               <li>
-                <a>Parent</a>
+                <Link to="shop">SHOP</Link>
+              </li>
+              <li>
+                <a>Categories</a>
                 <ul className="p-2">
                   <li>
-                    <a>Submenu 1</a>
+                    <Link to="category/jewelery">Jewelries</Link>
                   </li>
                   <li>
-                    <a>Submenu 2</a>
+                    <Link to="category/electronics">Electronics</Link>
+                  </li>
+                  <li>
+                    <Link to="category/men's-clothing">Men&apos;s</Link>
+                  </li>
+                  <li>
+                    <Link to="category/women's-clothing">Women&apos;s</Link>
                   </li>
                 </ul>
               </li>
-              <li>
-                <a>Item 3</a>
-              </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <Link to="/" className="btn btn-ghost text-xl">fakeStore</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getSingleCategory } from "../features/category_Page/categoryPageSlice";
 import ProductCard from "../components/ProductCard";
+import Hero from "../components/Hero";
 
 export default function CategoryPage() {
   const { category } = useParams();
@@ -16,15 +17,22 @@ export default function CategoryPage() {
 
   return (
     <>
-      {status === "succeeded"
-        ? products.map((item) => (
-            <ProductCard
-              id={item.id}
-              key={item.id}
-              title={item.title}
-            ></ProductCard>
-          ))
-        : "Loading..."}
+      <Hero title={category}></Hero>
+      <div className="flex md:max-w-3xl lg:max-w-6xl px-8 mx-auto pb-20">
+        <div className="grid gap-4  lg:gap-8 grid-cols-2 lg:grid-cols-4 md:grid-cols-3 justify-items-center mx-auto">
+          {status === "succeeded"
+            ? products.map((item) => (
+                <ProductCard
+                  id={item.id}
+                  image={item.image}
+                  price={item.price}
+                  key={item.id}
+                  title={item.title}
+                ></ProductCard>
+              ))
+            : "Loading..."}
+        </div>
+      </div>
     </>
   );
 }

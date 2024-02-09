@@ -51,7 +51,7 @@ export default function CartSideBar({ hideCart, handleClick }) {
           } flex-col items-center py-4`}
         >
           <p className="text-black text-xl font-bold mb-4">
-            SUBTOTAL : ${subtotal}
+            SUBTOTAL : ${subtotal.toFixed(2)}
           </p>
           <button className="btn-secondary btn btn-wide">Checkout</button>
         </div>

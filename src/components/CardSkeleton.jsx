@@ -1,7 +1,7 @@
 export default function CardSkeleton() {
   return (
     <>
-      <div className="skeleton h-32 w-44 absolute"></div>
+      <div className="skeleton w-32 h-32 max-h-32 max-w-44 absolute"></div>
       {/* <div className="card card-compact h-full w-full bg-base-100 shadow-md border-[1px] my-4 flex flex-col justify-end">
         <figure className="px-4 pt-4 h-32">
 

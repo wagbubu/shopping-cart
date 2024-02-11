@@ -28,7 +28,7 @@ export default function CartProductCard({ id, quantity }) {
   return (
     <>
       {itemData && (
-        <>
+        <li>
           <div className="card card-side bg-base-100 shadow-xl pl-6 my-2">
             <figure className="w-[100px]">
               <img src={itemData.image} />
@@ -45,7 +45,10 @@ export default function CartProductCard({ id, quantity }) {
                   </li>
                 </ul>
                 <div className="card-actions content-end justify-end">
-                  <button onClick={handleDelete} className="btn btn-sm btn-circle">
+                  <button
+                    onClick={handleDelete}
+                    className="btn btn-sm btn-circle"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-6 w-6"
@@ -65,7 +68,7 @@ export default function CartProductCard({ id, quantity }) {
               </div>
             </div>
           </div>
-        </>
+        </li>
       )}
     </>
   );

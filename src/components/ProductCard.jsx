@@ -35,8 +35,10 @@ export default function ProductCard({ id, title, price, image }) {
                 {titleShorten}
               </dfn>
             </h2>
-            <p className="italic text-sm">${price}</p>
-            <p className="text-xs">Rating: ⭐⭐⭐⭐⭐</p>
+            <div className="flex flex-col items-start">
+              <p className="italic text-md mb-6">${price}</p>
+              <p className="text-xs">Rating: ⭐⭐⭐⭐⭐</p>
+            </div>
           </div>
         </Link>
       </div>

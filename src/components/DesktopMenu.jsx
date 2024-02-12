@@ -1,23 +1,30 @@
 import { Link } from "react-router-dom";
 
 export default function DesktopMenu() {
+  const navigateToTop = () => {
+    window.scroll(0, 0);
+  };
   return (
     <>
       <div className="hidden lg:flex">
         <Link to="/" className="lg: btn btn-ghost text-xl">
-          fakeStore
+          FakeStore
         </Link>
       </div>
 
       <div className="hidden lg:flex">
         <ul className="menu menu-horizontal px-1 items-center">
-          <li>
-            <Link to="/">HOME</Link>
+          <li className="mx-2">
+            <Link onClick={navigateToTop} to="/">
+              HOME
+            </Link>
           </li>
-          <li>
-            <Link to="shop">SHOP</Link>
+          <li className="mx-2">
+            <Link onClick={navigateToTop} to="shop">
+              SHOP
+            </Link>
           </li>
-          <li className="max-w-min">
+          <li className="max-w-min mx-2">
             <div className="dropdown dropdown-bottom p-0">
               <div
                 tabIndex={0}
@@ -30,16 +37,24 @@ export default function DesktopMenu() {
                 className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
               >
                 <li>
-                  <Link to="category/jewelery">Jewelries</Link>
+                  <Link onClick={navigateToTop} to="category/jewelery">
+                    Jewelries
+                  </Link>
                 </li>
                 <li>
-                  <Link to="category/electronics">Electronics</Link>
+                  <Link onClick={navigateToTop} to="category/electronics">
+                    Electronics
+                  </Link>
                 </li>
                 <li>
-                  <Link to="category/men's-clothing">Men&apos;s</Link>
+                  <Link onClick={navigateToTop} to="category/men's-clothing">
+                    Men&apos;s
+                  </Link>
                 </li>
                 <li>
-                  <Link to="category/women's-clothing">Women&apos;s</Link>
+                  <Link onClick={navigateToTop} to="category/women's-clothing">
+                    Women&apos;s
+                  </Link>
                 </li>
               </ul>
             </div>

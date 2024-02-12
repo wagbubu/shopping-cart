@@ -11,11 +11,14 @@ export default function ProductCard({ id, title, price, image }) {
   };
   const titleShorten =
     title.length > 30 ? title.slice(0, 25).trim() + ".." : title;
+  const navigateToTop = () => {
+    window.scroll(0, 0);
+  };
 
   return (
     <>
       <div className="card card-compact h-full w-full bg-base-100 shadow-md border-[1px] my-4 flex flex-col justify-end">
-        <Link to={`/product/${id}`}>
+        <Link onClick={navigateToTop} to={`/product/${id}`}>
           <figure className="px-6 h-32">
             {imgLoaded || <CardSkeleton></CardSkeleton>}
             <img

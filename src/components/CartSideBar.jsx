@@ -39,6 +39,7 @@ export default function CartSideBar() {
               </svg>
             </label>
           </li>
+          {/* PRODUCTS ADDED IN CART WILL BE ADDED AS NEW LIST  */}
           {products &&
             products.map((product) => (
               <CartProductCard
@@ -48,6 +49,7 @@ export default function CartSideBar() {
               ></CartProductCard>
             ))}
           <li>
+            {/*SUBTOTAL and CHECKOUT BUTTON*/}
             <div
               className={`${
                 products.length ? "flex" : "hidden"

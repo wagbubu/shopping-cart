@@ -2,7 +2,11 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getSingleProduct } from "../features/single_product_page/singleProductSlice";
-import { addItemToCart, addSubTotal } from "../features/cart/cartSlice";
+import {
+  addItemToCart,
+  addSubTotal,
+  toggleCart,
+} from "../features/cart/cartSlice";
 //import { addToCart } from "../features/cart/cartSlice";
 
 export default function SingleProductPage() {
@@ -24,6 +28,7 @@ export default function SingleProductPage() {
   const handleAddToCart = () => {
     dispatch(addItemToCart({ productId: id, quantity: parseInt(quantity) }));
     dispatch(addSubTotal(product.price * quantity));
+    dispatch(toggleCart());
   };
 
   return (
@@ -42,12 +47,21 @@ export default function SingleProductPage() {
             </figure>
             <h1 className="text-xl w-full py-2">{product.title}</h1>
             <div className="w-full">
-              <h1 className="font-bold italic text-xl text-blue-700">USD ${product.price}</h1>
+              <h1 className="font-bold italic text-xl text-blue-700">
+                USD ${product.price}
+              </h1>
+
               <button
                 onClick={handleAddToCart}
-                className="btn btn-accent px-14 btn-md rounded-md mt-8 mr-2"
+                className="btn btn-accent btn-wide px-0 rounded-md mt-8 mr-2"
               >
-                Add to cart
+                <label
+                  className="btn btn-square w-full"
+                  htmlFor="my-drawer-4"
+                  aria-label="close sidebar"
+                >
+                  Add to cart
+                </label>
               </button>
               <span>
                 <input

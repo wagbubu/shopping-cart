@@ -12,8 +12,8 @@ export default function Cart() {
 
   return (
     <>
-      <div className="navbar-end">
-        <div className="drawer drawer-end">
+      <div>
+        <div className="drawer-end">
           <CartButton totalItems={totalItems}></CartButton>
           <CartSideBar></CartSideBar>
         </div>

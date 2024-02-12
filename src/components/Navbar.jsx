@@ -1,7 +1,7 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import Cart from "./Cart";
-import HamburgerMenu from "./HamburgerMenu";
 import DesktopMenu from "./DesktopMenu";
+import MobileMenu from "./MobileMenu";
 
 export default function Navbar() {
   //Homepage
@@ -9,10 +9,16 @@ export default function Navbar() {
   //Products/Category
   return (
     <>
-      <div className="bg-slate-100 min-h-screen">
-        <div className="navbar bg-blue-600 sticky z-10 top-0">
-          <HamburgerMenu></HamburgerMenu>
+      <div className="bg-slate-100">
+        <div className="flex bg-white justify-between shadow-md sticky z-10 top-0 min-h-16 items-center">
+          <MobileMenu></MobileMenu>
+          <div className="lg:hidden w-full text-center">
+            <Link to="/" className="btn btn-ghost text-xl">
+              fakeStore
+            </Link>
+          </div>
           <DesktopMenu></DesktopMenu>
+
           <Cart></Cart>
         </div>
         <Outlet></Outlet>

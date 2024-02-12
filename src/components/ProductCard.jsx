@@ -25,7 +25,7 @@ export default function ProductCard({ id, title, price, image }) {
               className="rounded-sm h-full w-full object-contain object-center"
             />
           </figure>
-          <div className="card-body text-center h-max">
+          <div className="card-body h-max flex flex-col items-start">
             <h2 className="card-title max-h-8">
               <dfn
                 title={title}
@@ -35,10 +35,8 @@ export default function ProductCard({ id, title, price, image }) {
                 {titleShorten}
               </dfn>
             </h2>
-            <div className="flex flex-col items-start">
-              <p className="italic text-md mb-6">${price}</p>
-              <p className="text-xs">Rating: ⭐⭐⭐⭐⭐</p>
-            </div>
+            <p className="italic text-md mb-4">${price}</p>
+            <p className="text-xs">Rating: ⭐⭐⭐⭐⭐</p>
           </div>
         </Link>
       </div>

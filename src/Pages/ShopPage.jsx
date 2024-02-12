@@ -18,7 +18,7 @@ export default function ShopPage() {
   return (
     <>
       <Hero title="shop"></Hero>
-      <div className="flex md:max-w-3xl lg:max-w-6xl px-8 mx-auto pb-20">
+      <div className="flex md:max-w-3xl lg:max-w-6xl px-4 mx-auto pb-20">
         <div className="grid gap-4  lg:gap-8 grid-cols-2 lg:grid-cols-4 md:grid-cols-3 justify-items-center mx-auto">
           {status == "loading"
             ? "Loading..."

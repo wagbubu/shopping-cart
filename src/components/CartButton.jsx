@@ -12,7 +12,7 @@ export default function CartButton({ totalItems }) {
               className="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
-              stroke="white"
+              stroke="currentColor"
             >
               <path
                 strokeLinecap="round"

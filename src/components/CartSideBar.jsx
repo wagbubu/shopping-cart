@@ -14,11 +14,15 @@ export default function CartSideBar() {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <ul className="p-6 min-h-full bg-base-200 w-96">
+        <ul className="p-6 min-h-full bg-base-200 w-80 lg:w-96 md:w-96">
           {/* Sidebar content here */}
           <li className="flex justify-between items-center mb-6">
             <p className="text-xl font-bold">MY CART: </p>
-            <label  className="btn btn-square btn-outline" htmlFor="my-drawer-4" aria-label="close sidebar">
+            <label
+              className="btn btn-square btn-outline"
+              htmlFor="my-drawer-4"
+              aria-label="close sidebar"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"

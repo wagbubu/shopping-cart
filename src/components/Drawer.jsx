@@ -8,6 +8,7 @@ export default function Drawer({ handleShowMenu, showMenu }) {
         id="my-drawer"
         type="checkbox"
         checked={showMenu}
+        onChange={handleShowMenu}
         className="drawer-toggle"
       />
       <div className="drawer-conten">{/* Page content here */}</div>

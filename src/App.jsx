@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import HomePage from "./Pages/HomePage.jsx";
+import HomePage from "./Pages/HomePage/HomePage.jsx";
 import ShopPage from "./Pages/ShopPage.jsx";
 import CategoryPage from "./Pages/CategoryPage.jsx";
 import SingleProductPage from "./Pages/SingleProductPage.jsx";

@@ -1,0 +1,11 @@
+.glow {
+  background: radial-gradient(
+      circle at center,
+      rgb(231, 211, 220),
+      rgb(231, 211, 220),
+      rgba(231, 211, 220, 0.7),
+      rgba(231, 211, 220, 0.3),
+      rgba(0, 0, 0, 0)
+    )
+    no-repeat;
+}

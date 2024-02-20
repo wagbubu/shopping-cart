@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <>
       <div className="min-h-lvh bg-slate-100">
-        <div className="flex bg-white justify-between shadow-md sticky z-10 top-0 min-h-16 items-center px-4">
+        <div className="flex bg-white justify-between shadow-md sticky z-10 top-0 min-h-20 items-center px-4">
           <MobileMenu></MobileMenu>
           <div className="lg:hidden w-full text-center">
             <Link onClick={navigateToTop} to="/" className="btn btn-ghost text-xl">

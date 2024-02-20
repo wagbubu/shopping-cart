@@ -17,9 +17,13 @@ export default function ProductCard({ id, title, price, image }) {
 
   return (
     <>
-      <div className="card card-compact h-full w-full bg-base-100 shadow-md border-[1px] my-4 flex flex-col justify-end">
-        <Link onClick={navigateToTop} to={`/product/${id}`}>
-          <figure className="px-6 h-32">
+      <Link
+        className="w-full h-full"
+        onClick={navigateToTop}
+        to={`/product/${id}`}
+      >
+        <div className="card card-compact h-full w-full bg-white shadow-md border-[1px] my-4 flex flex-col justify-end">
+          <figure className="px-6 py-4 h-32">
             {imgLoaded || <CardSkeleton></CardSkeleton>}
             <img
               onLoad={handleImageLoaded}
@@ -41,8 +45,8 @@ export default function ProductCard({ id, title, price, image }) {
             <p className="italic text-md mb-4">${price}</p>
             <p className="text-xs">Rating: ⭐⭐⭐⭐⭐</p>
           </div>
-        </Link>
-      </div>
+        </div>
+      </Link>
     </>
   );
 }

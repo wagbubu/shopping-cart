@@ -7,25 +7,26 @@ export default function Hero() {
     navigate("/shop");
     window.scrollTo(0, 0);
   };
+
   return (
     <div
-      className="hero min-h-[40rem] bg-[center_right_-6rem] bg-no-repeat lg:bg-center"
+      className="hero min-h-[50rem] bg-[center_right_-6rem] bg-no-repeat lg:bg-center"
       style={{
         backgroundImage: `url(${heroImage})`,
       }}
     >
       <div className="hero-overlay bg-opacity-60"></div>
-      <div className="hero-content lg:absolute lg:top-50 lg:left-0 text-center text-neutral-content lg:ml-20 lg:text-left">
+      <div className="hero-content text-center lg:text-left text-neutral-content w-full lg:justify-start lg:px-40 xl:px-20">
         <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-bold">FakeStore</h1>
-          <p className="mb-5">
+          <h1 className="mb-5 text-6xl font-bold">FakeStore</h1>
+          <p className="mb-5 text-lg">
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
             excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
             a id nisi.
           </p>
           <button
             onClick={handleButtonClick}
-            className="btn px-6 btn-wide btn-sm  mt-4"
+            className="btn px-6 btn-wide btn-md rounded-sm btn-primary text-white mt-4"
           >
             SHOP
           </button>

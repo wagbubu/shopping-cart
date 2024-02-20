@@ -38,8 +38,9 @@ export default function SingleProductPage() {
       ) : (
         <>
           <div className="flex flex-col items-center px-6">
-            <figure className="py-8">
+            <figure className="py-8 w-full bg-white">
               <img
+                className="m-auto"
                 src={product.image}
                 width="250"
                 alt={`${product.title} image`}

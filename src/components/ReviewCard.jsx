@@ -2,7 +2,8 @@
 export default function ReviewCard({ img, name, children, currentIndex }) {
   return (
     <li
-      className={`w-full flex-grow-0 flex-shrink-0 transition ease-in-out duration-500 translate-x-[-${currentIndex}00%] py-8`}
+      style={{ translate: `${-100 * currentIndex}%` }}
+      className={`w-full flex-grow-0 flex-shrink-0 ease-in-out duration-500 py-8`}
     >
       <div className="flex flex-col justify-center items-center gap-10">
         <figure>

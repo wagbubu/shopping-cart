@@ -38,7 +38,7 @@ export default function HomePage() {
             FREE SHIPPING!
           </p>
           <div className="mt-10">
-            <p className="text-lg w-96 lg:w-full">
+            <p className="text-lg w-full">
               Aenean a dictum purus. Morbi facilisis nulla id nibh placerat, ac
               placerat ante finibus. Morbi a pharetra sapien, in accumsan nisi.
               Praesent at purus suscipit, finibus nunc aliquet, dictum dolor.

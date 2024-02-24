@@ -3,8 +3,8 @@ import Awards from "./Awards";
 import FeaturedProducts from "./FeaturedProducts";
 import fs2 from "../../assets/fs2.png";
 import "./styles.css";
-import ReviewCard from "../../components/ReviewCard";
 import { useNavigate } from "react-router-dom";
+import ReviewSlider from "../../components/ReviewSlider";
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -53,11 +53,13 @@ export default function HomePage() {
           </button>
         </div>
       </div>
-      <div className="pt-20 pb-40 bg-slate-200 flex flex-col justify-center items-center text-4xl">
+      <div className="pt-20 pb-40 bg-slate-200 flex flex-col justify-center items-center text-4xl px-6">
         <p className="mb-20 text-4xl text-center">
           What Our Fake Customers Say
         </p>
-        <ReviewCard></ReviewCard>
+        <div className="w-full">
+          <ReviewSlider></ReviewSlider>
+        </div>
       </div>
     </>
   );

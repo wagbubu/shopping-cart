@@ -1,16 +1,16 @@
-import Hero from "../../components/Hero";
-import Awards from "./Awards";
-import FeaturedProducts from "./FeaturedProducts";
-import fs2 from "../../assets/fs2.png";
-import "./styles.css";
-import { useNavigate } from "react-router-dom";
-import ReviewSlider from "../../components/ReviewSlider";
+import Hero from '../../components/Hero';
+import Awards from './Awards';
+import FeaturedProducts from './FeaturedProducts';
+import fs2 from '../../assets/fs2.png';
+import './styles.css';
+import { useNavigate } from 'react-router-dom';
+import ReviewSlider from '../../components/ReviewSlider';
 
 export default function HomePage() {
   const navigate = useNavigate();
-  useInterv
+
   const navigateToShop = () => {
-    navigate("/shop");
+    navigate('/shop');
     window.scrollTo(0, 0);
   };
   return (
@@ -48,7 +48,7 @@ export default function HomePage() {
             onClick={navigateToShop}
             className="text-white btn btn-primary mt-16 btn-wide self-center lg:self-start"
           >
-            {" "}
+            {' '}
             SHOP NOW
           </button>
         </div>

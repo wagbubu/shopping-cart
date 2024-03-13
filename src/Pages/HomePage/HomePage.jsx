@@ -8,7 +8,7 @@ import ReviewSlider from "../../components/ReviewSlider";
 
 export default function HomePage() {
   const navigate = useNavigate();
-
+  useInterv
   const navigateToShop = () => {
     navigate("/shop");
     window.scrollTo(0, 0);
